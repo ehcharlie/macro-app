@@ -18,8 +18,9 @@ public class RecipeController {
     @Value("${api-key}")
     private String userApiKey;
 
+    //TODO: Convert this into a serializable object to return response
     @GetMapping()
-    public ResponseEntity<String> getRecipe() {
+    public ResponseEntity getRecipe() {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("x-api-key", userApiKey);
@@ -27,9 +28,9 @@ public class RecipeController {
         RestTemplate restTemplate = new RestTemplate();
 
         return restTemplate.exchange(
-                ConstantsAndQueries.RECIPE_URL + "Tomato",
+                ConstantsAndQueries.RECIPE_URL + "pork",
                 HttpMethod.GET,
                 new HttpEntity<>(headers),
-                String.class);
+                Object.class);
     }
 }
