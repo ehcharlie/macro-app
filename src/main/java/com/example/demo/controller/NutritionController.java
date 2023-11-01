@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.Person;
-import com.example.demo.service.PeopleService;
+import com.example.demo.constant.ConstantsAndQueries;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -12,32 +12,22 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/test")
-public class PeopleController {
+@RequestMapping("/nutrition-values")
+public class NutritionController {
 
-    private static final String NUTRITION_URL = "https://api.calorieninjas.com/v1/nutrition?query=";
+    @Value("${api-key}")
+    private String userApiKey;
 
-    private final PeopleService peopleService;
-
-    public PeopleController(PeopleService peopleService) {
-        this.peopleService = peopleService;
-    }
-
-    @GetMapping("/people")
-    public Person getPeople() {
-        return peopleService.getPeople();
-    }
-
-    @GetMapping("/test")
-    public ResponseEntity<String> test() {
+    @GetMapping()
+    public ResponseEntity<String> getNutritionValuesforItems() {
         HttpHeaders headers = new HttpHeaders();
 
-        headers.add("x-api-key", "GDKdEPuI44WKjIrKaLgoEA==chQIHtyPvuh2v5Hq");
+        headers.add("x-api-key", userApiKey);
 
         RestTemplate restTemplate = new RestTemplate();
 
         return restTemplate.exchange(
-                NUTRITION_URL + "Tomato",
+                ConstantsAndQueries.NUTRITION_URL + "Tomato",
                 HttpMethod.GET,
                 new HttpEntity<>(headers),
                 String.class);
