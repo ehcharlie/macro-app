@@ -1,7 +1,7 @@
-package com.example.demo.service;
+package com.example.macro.service;
 
-import com.example.demo.dao.RecipeDao;
-import com.example.demo.model.Recipe;
+import com.example.macro.dao.RecipeDao;
+import com.example.macro.model.Recipe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

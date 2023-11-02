@@ -1,6 +1,6 @@
-package com.example.demo.controller;
+package com.example.macro.controller;
 
-import com.example.demo.constant.ConstantsAndQueries;
+import com.example.macro.constant.ConstantsAndQueries;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;

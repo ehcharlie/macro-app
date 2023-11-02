@@ -1,6 +1,6 @@
-package com.example.demo.dao;
+package com.example.macro.dao;
 
-import com.example.demo.constant.ConstantsAndQueries;
+import com.example.macro.constant.ConstantsAndQueries;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
