@@ -1,6 +1,6 @@
-package com.example.demo.controller;
+package com.example.macro.controller;
 
-import com.example.demo.constant.ConstantsAndQueries;
+import com.example.macro.constant.ConstantsAndQueries;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/nutrition-values")
-public class NutritionController {
+@RequestMapping("/recipes")
+public class RecipeController {
 
     @Value("${api-key}")
     private String userApiKey;
 
     //TODO: Convert this into a serializable object to return response
     @GetMapping()
-    public ResponseEntity<String> getNutritionValuesforItems() {
+    public ResponseEntity getRecipe() {
         HttpHeaders headers = new HttpHeaders();
 
         headers.add("x-api-key", userApiKey);
@@ -28,9 +28,9 @@ public class NutritionController {
         RestTemplate restTemplate = new RestTemplate();
 
         return restTemplate.exchange(
-                ConstantsAndQueries.NUTRITION_URL + "Tomato",
+                ConstantsAndQueries.RECIPE_URL + "pork",
                 HttpMethod.GET,
                 new HttpEntity<>(headers),
-                String.class);
+                Object.class);
     }
 }

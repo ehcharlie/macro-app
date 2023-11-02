@@ -1,4 +1,4 @@
-package com.example.demo.dao;
+package com.example.macro.dao;
 
 public class NutritionDao {
 }
