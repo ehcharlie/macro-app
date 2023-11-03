@@ -4,20 +4,13 @@ import java.util.List;
 
 public class Recipe {
 
-    public static final String TITLE = "title";
+    public static final String TITLE_KEY = "title";
 
-    public static final String INGREDIENTS = "ingredients";
+    public static final String INGREDIENTS_KEY = "ingredients";
 
-    public static final String SERVINGS = "servings";
+    public static final String SERVINGS_KEY = "servings";
 
-    public static final String INSTRUCTIONS = "instructions";
-
-    public Recipe(String title, List<String> ingredients, String servings, String instructions) {
-        this.title = title;
-        this.ingredients = ingredients;
-        this.servings = servings;
-        this.instructions = instructions;
-    }
+    public static final String INSTRUCTIONS_KEY = "instructions";
 
     private String title;
 
@@ -26,6 +19,14 @@ public class Recipe {
     private String servings;
 
     private String instructions;
+
+
+    public Recipe(String title, List<String> ingredients, String servings, String instructions) {
+        this.title = title;
+        this.ingredients = ingredients;
+        this.servings = servings;
+        this.instructions = instructions;
+    }
 
     public String getTitle() {
         return title;

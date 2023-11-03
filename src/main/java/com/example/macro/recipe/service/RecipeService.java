@@ -22,10 +22,10 @@ public class RecipeService {
             List<Recipe> recipeList = new ArrayList<>();
 
             recipes.forEach(recipe -> recipeList.add(new Recipe(
-                    recipe.get(Recipe.TITLE),
-                    new ArrayList<>(Arrays.asList(recipe.get(Recipe.INGREDIENTS).split("\\|"))),
-                    recipe.get(Recipe.SERVINGS),
-                    recipe.get(Recipe.INSTRUCTIONS))));
+                    recipe.get(Recipe.TITLE_KEY),
+                    new ArrayList<>(Arrays.asList(recipe.get(Recipe.INGREDIENTS_KEY).split("\\|"))),
+                    recipe.get(Recipe.SERVINGS_KEY),
+                    recipe.get(Recipe.INSTRUCTIONS_KEY))));
 
             return recipeList;
         }

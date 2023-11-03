@@ -1,60 +1,42 @@
 package com.example.macro.nutrition.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Nutrition {
-
-    public Nutrition() {
-    }
-
-    public Nutrition(
-            String name,
-            String calories,
-            String serving_size_g,
-            String fat_total_g,
-            String fat_saturated_g,
-            String protein_g,
-            String sodium_mg,
-            String potassium_mg,
-            String cholesterol_mg,
-            String carbohydrates_total_g,
-            String fiber_g,
-            String sugar_g) {
-        this.name = name;
-        this.calories = calories;
-        this.serving_size_g = serving_size_g;
-        this.fat_total_g = fat_total_g;
-        this.fat_saturated_g = fat_saturated_g;
-        this.protein_g = protein_g;
-        this.sodium_mg = sodium_mg;
-        this.potassium_mg = potassium_mg;
-        this.cholesterol_mg = cholesterol_mg;
-        this.carbohydrates_total_g = carbohydrates_total_g;
-        this.fiber_g = fiber_g;
-        this.sugar_g = sugar_g;
-    }
 
     private String name;
 
     private String calories;
 
-    private String serving_size_g;
+    @JsonProperty("serving_size_g")
+    private String servingSize;
 
-    private String fat_total_g;
+    @JsonProperty("fat_total_g")
+    private String totalFat;
 
-    private String fat_saturated_g;
+    @JsonProperty("fat_saturated_g")
+    private String saturatedFat;
 
-    private String protein_g;
+    @JsonProperty("protein_g")
+    private String protein;
 
-    private String sodium_mg;
+    @JsonProperty("sodium_mg")
+    private String sodium;
 
-    private String potassium_mg;
+    @JsonProperty("potassium_mg")
+    private String potassium;
 
-    private String cholesterol_mg;
+    @JsonProperty("cholesterol_mg")
+    private String cholesterol;
 
-    private String carbohydrates_total_g;
+    @JsonProperty("carbohydrates_total_g")
+    private String carbohydrates;
 
-    private String fiber_g;
+    @JsonProperty("fiber_g")
+    private String fiber;
 
-    private String sugar_g;
+    @JsonProperty("sugar_g")
+    private String sugar;
 
     public String getName() {
         return name;
@@ -72,83 +54,83 @@ public class Nutrition {
         this.calories = calories;
     }
 
-    public String getServing_size_g() {
-        return serving_size_g;
+    public String getServingSize() {
+        return servingSize;
     }
 
-    public void setServing_size_g(String serving_size_g) {
-        this.serving_size_g = serving_size_g;
+    public void setServingSize(String servingSize) {
+        this.servingSize = servingSize;
     }
 
-    public String getFat_total_g() {
-        return fat_total_g;
+    public String getTotalFat() {
+        return totalFat;
     }
 
-    public void setFat_total_g(String fat_total_g) {
-        this.fat_total_g = fat_total_g;
+    public void setTotalFat(String totalFat) {
+        this.totalFat = totalFat;
     }
 
-    public String getFat_saturated_g() {
-        return fat_saturated_g;
+    public String getSaturatedFat() {
+        return saturatedFat;
     }
 
-    public void setFat_saturated_g(String fat_saturated_g) {
-        this.fat_saturated_g = fat_saturated_g;
+    public void setSaturatedFat(String saturatedFat) {
+        this.saturatedFat = saturatedFat;
     }
 
-    public String getProtein_g() {
-        return protein_g;
+    public String getProtein() {
+        return protein;
     }
 
-    public void setProtein_g(String protein_g) {
-        this.protein_g = protein_g;
+    public void setProtein(String protein) {
+        this.protein = protein;
     }
 
-    public String getSodium_mg() {
-        return sodium_mg;
+    public String getSodium() {
+        return sodium;
     }
 
-    public void setSodium_mg(String sodium_mg) {
-        this.sodium_mg = sodium_mg;
+    public void setSodium(String sodium) {
+        this.sodium = sodium;
     }
 
-    public String getPotassium_mg() {
-        return potassium_mg;
+    public String getPotassium() {
+        return potassium;
     }
 
-    public void setPotassium_mg(String potassium_mg) {
-        this.potassium_mg = potassium_mg;
+    public void setPotassium(String potassium) {
+        this.potassium = potassium;
     }
 
-    public String getCholesterol_mg() {
-        return cholesterol_mg;
+    public String getCholesterol() {
+        return cholesterol;
     }
 
-    public void setCholesterol_mg(String cholesterol_mg) {
-        this.cholesterol_mg = cholesterol_mg;
+    public void setCholesterol(String cholesterol) {
+        this.cholesterol = cholesterol;
     }
 
-    public String getCarbohydrates_total_g() {
-        return carbohydrates_total_g;
+    public String getCarbohydrates() {
+        return carbohydrates;
     }
 
-    public void setCarbohydrates_total_g(String carbohydrates_total_g) {
-        this.carbohydrates_total_g = carbohydrates_total_g;
+    public void setCarbohydrates(String carbohydrates) {
+        this.carbohydrates = carbohydrates;
     }
 
-    public String getFiber_g() {
-        return fiber_g;
+    public String getFiber() {
+        return fiber;
     }
 
-    public void setFiber_g(String fiber_g) {
-        this.fiber_g = fiber_g;
+    public void setFiber(String fiber) {
+        this.fiber = fiber;
     }
 
-    public String getSugar_g() {
-        return sugar_g;
+    public String getSugar() {
+        return sugar;
     }
 
-    public void setSugar_g(String sugar_g) {
-        this.sugar_g = sugar_g;
+    public void setSugar(String sugar) {
+        this.sugar = sugar;
     }
 }
