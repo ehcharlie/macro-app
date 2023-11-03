@@ -1,4 +1,4 @@
-package com.example.macro.users.utils;
+package com.example.macro.user.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

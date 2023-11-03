@@ -1,9 +1,9 @@
-package com.example.macro.users.service.impl;
+package com.example.macro.user.service.impl;
 
-import com.example.macro.users.entities.User;
-import com.example.macro.users.repository.UserRepository;
-import com.example.macro.users.service.UserService;
-import com.example.macro.users.utils.EmailValidation;
+import com.example.macro.user.entities.User;
+import com.example.macro.user.repository.UserRepository;
+import com.example.macro.user.service.UserService;
+import com.example.macro.user.utils.EmailValidation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

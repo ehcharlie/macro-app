@@ -1,4 +1,4 @@
-package com.example.macro.users.utils;
+package com.example.macro.user.utils;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
