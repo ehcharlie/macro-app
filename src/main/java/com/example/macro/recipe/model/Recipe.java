@@ -20,7 +20,6 @@ public class Recipe {
 
     private String instructions;
 
-
     public Recipe(String title, List<String> ingredients, String servings, String instructions) {
         this.title = title;
         this.ingredients = ingredients;
