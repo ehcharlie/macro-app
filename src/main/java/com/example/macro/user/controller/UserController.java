@@ -1,6 +1,6 @@
 package com.example.macro.user.controller;
 
-import com.example.macro.user.entities.User;
+import com.example.macro.user.document.User;
 import com.example.macro.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

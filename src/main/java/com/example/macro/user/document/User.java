@@ -1,22 +1,34 @@
-package com.example.macro.user.entities;
+package com.example.macro.user.document;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "user")
 public class User {
+
     @Id
     private String id;
+
     private String firstName;
+
     private String lastName;
+
     private String userName;
+
     private String email;
+
     private String password;
 
     public User() {
     }
 
-    public User(String id, String firstName, String lastName, String userName, String email, String password) {
+    public User(
+            String id,
+            String firstName,
+            String lastName,
+            String userName,
+            String email,
+            String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

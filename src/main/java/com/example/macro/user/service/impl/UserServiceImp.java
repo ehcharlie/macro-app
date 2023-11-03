@@ -1,6 +1,6 @@
 package com.example.macro.user.service.impl;
 
-import com.example.macro.user.entities.User;
+import com.example.macro.user.document.User;
 import com.example.macro.user.repository.UserRepository;
 import com.example.macro.user.service.UserService;
 import com.example.macro.user.utils.EmailValidation;
@@ -25,8 +25,8 @@ public class UserServiceImp implements UserService {
         EmailValidation validation = new EmailValidation(user.getEmail());
         validation.isEmailValid();
 
-        Optional<User> userByEmail = userRepository.findByEmail("adoe@yahoo.com");
-        if (userByEmail != null) {
+        Optional<User> userByEmail = userRepository.findByEmail(user.getEmail());
+        if (userByEmail.isPresent()) {
             throw new RuntimeException("Record Already Exists");
         }
 
