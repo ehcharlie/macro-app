@@ -1,4 +1,4 @@
-package com.example.macro.model;
+package com.example.macro.recipe.model;
 
 import java.util.List;
 

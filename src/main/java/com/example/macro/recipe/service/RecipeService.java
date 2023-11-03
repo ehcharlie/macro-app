@@ -1,8 +1,7 @@
-package com.example.macro.service;
+package com.example.macro.recipe.service;
 
-import com.example.macro.dao.RecipeDao;
-import com.example.macro.model.Recipe;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.macro.recipe.dao.RecipeDao;
+import com.example.macro.recipe.model.Recipe;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -10,8 +9,11 @@ import java.util.*;
 @Service
 public class RecipeService {
 
-    @Autowired
-    RecipeDao recipeDao;
+    private final RecipeDao recipeDao;
+
+    public RecipeService(RecipeDao recipeDao) {
+        this.recipeDao = recipeDao;
+    }
 
     public List<Recipe> getRecipe(String userRecipe) {
         List<Map<String, String>> recipes = recipeDao.getRecipes(userRecipe);

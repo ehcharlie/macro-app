@@ -1,8 +1,7 @@
-package com.example.macro.controller;
+package com.example.macro.recipe.controller;
 
-import com.example.macro.service.RecipeService;
-import com.example.macro.model.Recipe;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.macro.recipe.model.Recipe;
+import com.example.macro.recipe.service.RecipeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +13,11 @@ import java.util.List;
 @RequestMapping("/recipes")
 public class RecipeController {
 
-    @Autowired
-    RecipeService recipeService;
+    private final RecipeService recipeService;
+
+    public RecipeController(RecipeService recipeService) {
+        this.recipeService = recipeService;
+    }
 
     @GetMapping("/{recipe}")
     public List<Recipe> getRecipe(@PathVariable String recipe) {
