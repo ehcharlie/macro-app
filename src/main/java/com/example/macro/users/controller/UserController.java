@@ -1,9 +1,8 @@
-package com.example.demo.users.controller;
+package com.example.macro.users.controller;
 
-import com.example.demo.users.entities.User;
-import com.example.demo.users.service.UserService;
+import com.example.macro.users.entities.User;
+import com.example.macro.users.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

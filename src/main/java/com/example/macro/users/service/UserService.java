@@ -1,6 +1,6 @@
-package com.example.demo.users.service;
+package com.example.macro.users.service;
 
-import com.example.demo.users.entities.User;
+import com.example.macro.users.entities.User;
 
 public interface UserService {
 
