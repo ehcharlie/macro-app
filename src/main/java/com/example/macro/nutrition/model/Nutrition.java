@@ -1,4 +1,4 @@
-package com.example.macro.model;
+package com.example.macro.nutrition.model;
 
 public class Nutrition {
 
