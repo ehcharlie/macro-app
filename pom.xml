@@ -15,6 +15,7 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>17</java.version>
+        <version.spring-security-crypto>6.0.2</version.spring-security-crypto>
     </properties>
     <dependencies>
         <dependency>
@@ -43,7 +44,7 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-crypto</artifactId>
-            <version>6.0.2</version>
+            <version>${version.spring-security-crypto}</version>
         </dependency>
     </dependencies>
 
