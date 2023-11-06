@@ -10,27 +10,27 @@ public class UserController {
 
     private final UserService userService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
+    public UserController(UserService service) {
+        this.userService = service;
     }
 
     @PostMapping()
     public User createUser(@RequestBody User user) {
-        return userService.createUser(user);
+        return userService.save(user);
     }
 
     @GetMapping(value = "/user/{email}")
     public User getUser(@PathVariable String email) {
-        return userService.getUser(email);
+        return userService.findById(email);
     }
 
     @DeleteMapping(value = "/user/{email}")
     public void deleteUser(@PathVariable String email) {
-        userService.deleteUser(email);
+        userService.delete(email);
     }
 
     @PutMapping(value = "/user/{email}")
     public User updateUser(@PathVariable String email, @RequestBody User updatedUser) {
-        return userService.updateUser(email, updatedUser);
+        return userService.update(email, updatedUser);
     }
 }

@@ -1,13 +1,9 @@
 package com.example.macro.user.document;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "user")
 public class User {
-
-    @Id
-    private String id;
 
     private String firstName;
 
@@ -23,26 +19,16 @@ public class User {
     }
 
     public User(
-            String id,
             String firstName,
             String lastName,
             String userName,
             String email,
             String password) {
-        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
         this.password = password;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getFirstName() {
